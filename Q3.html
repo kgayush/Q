@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQuery Assignment</title>
+    <style>
+     
+      .content {
+        padding: 10px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+      }
+
+      .content:nth-child(odd) {
+        background-color: #ddd;
+      }
+
+      .content:nth-child(even) {
+        background-color: rgb(184, 41, 69);
+      }
+
+      button {
+        width: 10%;
+        margin: 2% 40%;
+        padding: 12px 12px;
+        border-radius: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="comments" style="border: 1px solid green; padding: 1rem; margin-bottom: 0.5rem"
+    ></div>
+    <button id="load">Load Data</button>
+    <script>
+      $(document).ready(function () {
+        var $comments = $(".comments");
+
+        $("#load").click(function (e) {
+          $.ajax({
+            type: "GET",
+            url: "https://jsonplaceholder.typicode.com/posts",
+            success: function (posts) {
+              $.each(posts, function (i, post) {
+                var element = `<div id="${post.id}" class="content">
+                  <h3>${post.title}</h3>
+                  <p>${post.body}</p>
+                </div>`;
+                $comments.append(element);
+              });
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
