@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Details</title>
+    <style type="text/CSS">
+        body {
+            margin: 0;
+        }
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 12px 20px;
+            background-color: rgb(199, 227, 233);
+            width: 50%;
+        }
+        input {
+            padding: 5px 5px;
+            width: 98%;
+            margin: 8px 0;
+            
+        }
+        input[type=file] {
+            border: 1px dashed black;
+            padding: 10% 35%;
+            width: 30%;
+        }
+        label {
+            font-size: small;
+        }
+        button {
+            border-radius: 20px;
+            padding: 10px 25px;
+            margin: 10px;
+            background-color: rgb(83, 134, 245);
+            color: white;
+               
+        }
+        textarea {
+            margin: 8px 0;
+            width: 99%; 
+        }
+
+        #save {
+            margin-left: 32%;
+        }
+    </style>
+</head>
+<body>
+    <form action="dashboard.html" onsubmit="save_data()">
+        <label>PRODUCT NAME</label><br>
+        <input type="text" id="pname"><br><br>
+        <label>UNIT OF MEASUREMENT</label><br>
+        <input type="text" id="unit"><br><br>
+        <label>PRICE</label><br>
+        <input type="number" id="price"><br><br>
+        <label>PRODUCT IMAGE</label><br>
+        <input type="file" id="pimage"><br><br>
+        <label>PRODUCT DESCRIPTION</label><br>
+        <textarea id="description" rows="5"></textarea><br><br>
+        <button type="submit" id="save">Save</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script src="index.js"></script>
+    
+</body>
+</html>

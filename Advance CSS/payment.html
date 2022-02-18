@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            background-color: rgb(255, 252, 214);
+            margin: 0%;
+        }        
+        button {
+            font-weight: bold;
+            background-color: rgb(157, 224, 224);
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+
+        .topnav{
+            overflow: hidden;
+            background-color: white;    
+        }
+        .topnav a{
+            float: right;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            display: block;
+            margin: 8px;            
+        }  
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .main {
+            display: flex;
+            flex-direction: row;
+            background-color: crgb(255, 252, 214);
+        }
+        .left {
+            background-color: rgb(255, 252, 214);
+            padding:10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        .address {
+            background-color: white;
+            padding: 10px 10px;
+            border: 1px solid black;
+            flex: 1;
+            margin: 10px;
+        }
+        .inneraddress {
+            padding: 20px;
+            margin: 20px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+            max-width: 40%;
+        }
+        .payment {
+            background-color: white;
+            border: 1px solid black;
+            flex: 1;
+            margin: 10px;
+            max-width: 60%;
+        }
+        .right {
+            margin:20px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 30%;            
+        }        
+        .input {
+            border: none;
+            padding: 20px 20px;
+            color:gray;
+            border-bottom: 1px solid grey;
+        }
+
+        #left {
+            float: left;
+            font-size: 18px;
+            padding-top: 20px;
+        }
+        #input1 {
+            display: inline-block;
+            width: 70%;
+            float: right;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="#">Cart</a>
+        <a href="#">User</a>
+        <a href="#">Help</a>
+        <a href="#">Search</a>
+        <a href="#" id="left">Mumbai Maharastra, India</a>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <div class="address">
+                <h3 style="padding-left:20px;">Select Address</h3>
+                <div class="inneraddress">
+                    <b>Home</b>
+                    <p>12/b8, SV Road,</p>
+                    <p>Malad, Mumbai 400064</p>
+                    <button>DELIVER HERE</button>
+                </div>
+            </div>
+            <h3 style="padding-left:40px;">Payment</h3>
+
+            <div class="payment">
+                <input type="text" class="input" placeholder="Card Number"><br>
+                <input type="text" class="input" placeholder="Valid Through(MM/YY)">
+                <input type="text" class="input" style="border: 1px solid gray;" placeholder="CVV"><br>
+                <input type="text" class="input" placeholder="Name on Card" style="width: 90%;">
+            </div>  
+            <button style="width: 20%; margin-left: 10px;">Pay Rs 500</button>                    
+        </div>
+        
+
+
+        <div class="right">
+            <h3>FARM FRESH STORE</h3>
+            <p>Malad West</p>
+            <hr style="width:100%;">
+            <span><p style="display: inline-block;">Tomatoes</p>
+            <input type="number" id="input1"  value="1"><br></span>
+            <span><p style="display: inline-block;">Carrot </p>
+            <input type="number" id="input1"  value="2"><br></span>
+            <span><p style="display: inline-block;">Cabbage</p>
+            <input type="number" id="input1"  value="1"><br></span>
+
+            <br><br>
+            <b>Bill Details:</b>
+            <span>
+            <p style="display: inline-block;">Item Total:</p>
+            <p style="display: inline-block;float:right">450Rs</p>
+            </span>
+            <span>
+            <p style="display: inline-block;">Delivery:</p>
+            <p style="display: inline-block;float:right">50Rs</p>
+            </span>
+            <br>
+            <hr style="width:100%;"><br>
+            <span>
+                <b style="display: inline-block;">To Pay:</b>
+                <p style="display: inline-block;float:right">500Rs</p>
+            </span>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

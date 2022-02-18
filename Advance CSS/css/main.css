@@ -1,0 +1,56 @@
+.topnav {
+  overflow: hidden;
+  background-color: #b82945;
+}
+
+.topnav a {
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  color: #ddd;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+body {
+  background-color: #202124;
+}
+
+.trigger {
+  width: 200px;
+  height: 200px;
+  border: 20px solid #999;
+  background: #ddd;
+  margin: 10% 40%;
+}
+
+.box {
+  display: inline-block;
+  background: #b82945;
+  width: 200px;
+  height: 200px;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.trigger:hover .box {
+  -webkit-transform: translate(200px, 150px) rotate(20deg);
+          transform: translate(200px, 150px) rotate(20deg);
+}
+/*# sourceMappingURL=main.css.map */
