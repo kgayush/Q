@@ -1,0 +1,44 @@
+{% extends "todo/layout.html" %}
+{% block title %} 
+    Add Todo
+{% endblock title %} 
+
+{% block style %}
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/add">Add ToDo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>                   
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="container my-3">
+    <h2>Add Todo</h2>
+    <form  class="mb-3" method="POST">
+      {% csrf_token %} 
+      <div class="mb-3">
+        <label for="title" class="form-label">Todo Title</label>
+        <input type="text" class="form-control" name="title" aria-describedby="emailHelp" value="{{title}}"> 
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Todo Description</label>
+        <input type="text" class="form-control" name="desc" value="{{desc}}">
+      </div>             
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+  </div>
+
+{% endblock body %}
