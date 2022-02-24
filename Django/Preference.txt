@@ -1,0 +1,2 @@
+Django is bit difficult to manage because there are lot of files at a time, although it provides an admin panel which is quite useful.
+While Flask is easy to use as compared to Django. 
