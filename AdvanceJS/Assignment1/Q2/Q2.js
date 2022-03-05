@@ -1,21 +1,17 @@
-async function getGithubRepoInfo(repoName) {
-    const apiResponse = await fetch(
-      `https://api.github.com/search/repositories?q=${repoName}`
-    );
-  
-    const result = await apiResponse.json();
-  
-    result.items.map((repo) => answer(repo));
+async function getInfo(name) {
+    const apiResponse = await fetch(`https://api.github.com/search/repositories?q=${name}`);  
+    const myData = await apiResponse.json();  
+    myData.items.map((value) => output(value));
   }
   
-  async function answer(repo) {
+  async function output(repo) {
     const ownerResponse = await fetch(repo.owner.url);
     const ownersData = await ownerResponse.json();
   
     const branchResponse = await fetch(repo.branches_url.split("{")[0]);
     const branchData = await branchResponse.json();
   
-    const answer = {
+    const output = {
       name: repo.name,
       full_name: repo.full_name,
       private: repo.private,
@@ -30,7 +26,7 @@ async function getGithubRepoInfo(repoName) {
       numberOfBranch: branchData.length,
     };
   
-    console.log(answer);
+    console.log(output);
   }
-  
-  getGithubRepoInfo("node");
+
+getInfo("kgayush");
